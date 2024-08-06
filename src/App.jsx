@@ -1,5 +1,13 @@
+import Navigation from "./components/navigation/Navigation";
+import HeroSection from "./components/hero-component/Hero-Section";
+
 function App() {
-  return <h1> Welcome to React 101</h1>;
+  return (
+    <>
+      <Navigation />
+      <HeroSection />
+    </>
+  );
 }
 
 export default App;

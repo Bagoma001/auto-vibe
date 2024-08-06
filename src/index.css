@@ -9,3 +9,121 @@ html {
   font-size: 62.5%;
   font-family: poppins;
 }
+
+:root {
+  --button-color: #f59f00;
+  --button-color-secondary: #1864ab;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* BEGINNING OF A GREAT DESIGN */
+.navigation-flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: rgb(17, 17, 17);
+}
+
+.navigation-list li {
+  display: inline-block;
+  padding: clamp(1rem, 0.5vw, 1.5rem);
+}
+.links {
+  text-decoration: none;
+  color: rgb(179, 179, 179);
+  font-weight: 600;
+  font-size: clamp(1.3rem, 1.3vw, 1.5rem);
+}
+
+.active {
+  color: red;
+}
+
+.authentication {
+  border: 2px solid var(--button-color-secondary);
+  border-radius: 10px;
+  padding: clamp(0.7rem, 0.6vw, 1rem) clamp(0.7rem, 0.6vw, 0.9rem);
+  text-decoration: none;
+
+  font-size: clamp(1.3rem, 1.3vw, 1.5rem);
+}
+
+.login {
+  margin: clamp(1rem, 1vw, 1.8rem);
+  color: white;
+}
+
+.signup {
+  background-color: var(--button-color-secondary);
+  color: white;
+}
+
+/* hERO CONTENT */
+
+.slideshow {
+  position: relative;
+}
+
+.list-position {
+  top: 0;
+  position: absolute;
+  left: 0;
+}
+
+.hero-transition {
+  opacity: 0;
+  transform: translateX(-1rem);
+  transition: all 0.5s ease-in-out;
+}
+
+.slideshow img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+
+  filter: brightness(30%);
+}
+
+.slideshow .active {
+  z-index: 1;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.text-positioning {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  right: 55%;
+  text-align: left;
+  margin: 0 auto;
+
+  color: white;
+  font-weight: 700;
+}
+
+.text-positioning h1 {
+  font-size: clamp(3.5rem, 3vw, 4.5rem);
+}
+
+.text-positioning p {
+  margin: 2rem 0;
+  font-weight: 200;
+  font-size: clamp(1.8rem, 1.4vw, 2.5rem);
+}
+
+.shop-button {
+  padding: 1rem clamp(0.8rem, 1vw, 1.5rem);
+  font-size: clamp(1.6rem, 1.5vw, 1.8rem);
+  border-radius: 20px;
+
+  text-decoration: none;
+  background-color: var(--button-color);
+  color: white;
+  font-weight: 400;
+}

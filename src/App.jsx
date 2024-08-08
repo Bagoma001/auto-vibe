@@ -6,6 +6,10 @@ function App() {
     <>
       <Navigation />
       <HeroSection />
+      <h1>
+        This is to check whether we are still in there
+      </h1>
+  
     </>
   );
 }

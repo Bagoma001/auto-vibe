@@ -1,37 +1,46 @@
 import NavigationHelper from "./NavigationHelper";
+import Authentication from "../authentication/Authentication";
+import Icons from "../../utils/Icons";
+
+import logo from "../../assets/logo.png";
 
 function Navigation() {
   return (
     <>
       <div className="navigation-flex-container">
+        <div className="logo">
+          <img src={logo} alt="" className="img" />
+        </div>
         <ul className="navigation-list">
           <li className="navigation-single">
             <NavigationHelper href="/">Home</NavigationHelper>
           </li>
 
-          <li className="navigation-single">
-            <NavigationHelper href="/categories">Categories</NavigationHelper>
+          <li>
+            <NavigationHelper href="/categories" className="category">
+              <span className="navigation-icons">
+                Categories
+                <Icons lightIcon>keyboard_arrow_down </Icons>
+              </span>
+            </NavigationHelper>
           </li>
 
           <li className="navigation-single">
             <NavigationHelper href="/company">Company</NavigationHelper>
           </li>
-          <li className="navigation-single">
-            <NavigationHelper href="/blog">Blog</NavigationHelper>
+          <li>
+            <NavigationHelper href="/blog">
+              <span className="navigation-icons">
+                Blog
+                <Icons lightIcon>keyboard_arrow_down </Icons>
+              </span>
+            </NavigationHelper>
           </li>
           <li className="navigation-single">
             <NavigationHelper href="/contact">Contact</NavigationHelper>
           </li>
         </ul>
-
-        <div>
-          <a href="login" className="authentication login">
-            Login
-          </a>
-          <a href="signup" className="authentication signup">
-            Register
-          </a>
-        </div>
+        <Authentication />
       </div>
     </>
   );

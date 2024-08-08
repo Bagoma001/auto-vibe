@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Icons from "../../utils/Icons";
 
 import firstImg from "../../assets/vehicles.jpg";
 import secondImg from "../../assets/vehicle-two.jpg";
@@ -31,7 +32,7 @@ export default function Slideshow() {
       setCurrentImageIndex((prevIndex) =>
         prevIndex < heroContent.length - 1 ? prevIndex + 1 : 0
       );
-    }, 55000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -39,7 +40,7 @@ export default function Slideshow() {
   return (
     <>
       <div className="slideshow">
-        <ul className="hero-styling">
+        <ul className="hero-styling ">
           {heroContent.map((hero, index) => (
             <li key={hero.id} className={index > 0 ? "list-position" : ""}>
               <div
@@ -58,9 +59,12 @@ export default function Slideshow() {
                   <h1>{hero.heading} </h1>
                   <p>{hero.description} </p>
 
-                  <a href="./shop" className="shop-button">
-                    Shop now
-                  </a>
+                  <span className="icon-flex">
+                    <a href="./shop" className="shop-button">
+                      Shop now
+                    </a>
+                    <Icons BackgroundIcon>north_east</Icons>
+                  </span>
                 </div>
               </div>
             </li>

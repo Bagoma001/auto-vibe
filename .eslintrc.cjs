@@ -6,6 +6,12 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
+    {
+      plugins: ["react"],
+      rules: {
+        "react/prop-types": 0,
+      },
+    },
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parserOptions: { ecmaVersion: "latest", sourceType: "module" },

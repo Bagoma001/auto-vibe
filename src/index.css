@@ -26,6 +26,17 @@ html {
   align-items: center;
 
   background-color: rgb(17, 17, 17);
+  padding: clamp(1rem, 0.5vw, 1.5rem);
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+  max-width: 8%;
+  height: auto;
 }
 
 .navigation-list li {
@@ -39,9 +50,22 @@ html {
   font-size: clamp(1.3rem, 1.3vw, 1.5rem);
 }
 
-.active {
-  color: red;
+.navigation-icons {
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
+
+.light-icons {
+  text-align: center;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+/* .active {
+  color: red;
+} */
 
 .authentication {
   border: 2px solid var(--button-color-secondary);
@@ -76,8 +100,9 @@ html {
 
 .hero-transition {
   opacity: 0;
+  visibility: hidden;
   transform: translateX(-1rem);
-  transition: all 0.5s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 
 .slideshow img {
@@ -85,7 +110,7 @@ html {
   height: auto;
   object-fit: contain;
 
-  filter: brightness(30%);
+  filter: brightness(20%);
 }
 
 .slideshow .active {
@@ -99,7 +124,7 @@ html {
   position: absolute;
   top: 20%;
   left: 5%;
-  right: 55%;
+  right: clamp(1rem, 55vw, 80rem);
   text-align: left;
   margin: 0 auto;
 
@@ -118,12 +143,30 @@ html {
 }
 
 .shop-button {
-  padding: 1rem clamp(0.8rem, 1vw, 1.5rem);
   font-size: clamp(1.6rem, 1.5vw, 1.8rem);
-  border-radius: 20px;
 
   text-decoration: none;
-  background-color: var(--button-color);
+
   color: white;
   font-weight: 400;
+}
+
+.icon-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--button-color);
+  border-radius: 40px;
+  padding: 0.5rem 0.2rem 0.5rem clamp(0.8rem, 1vw, 1.5rem);
+  max-width: clamp(10rem, 10vw, 15rem);
+}
+
+.icons {
+  background-color: white;
+  border-radius: 50%;
+  padding: 1rem;
+
+  color: black;
+  text-align: center;
 }
